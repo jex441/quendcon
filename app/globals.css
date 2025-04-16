@@ -26,3 +26,12 @@ body {
   color: var(--foreground);
   font-family: Playfair Display, serif;
 }
+
+@media (max-width: 768px) {
+  body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left bottom;
+  }
+}
+
