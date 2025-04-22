@@ -24,10 +24,22 @@ export default function Home() {
 		<>
 			<div className="petals-container">{renderPetals()}</div>
 
-			<div className="font-playfair flex min-h-screen items-start mt-55 lg:mt-0 lg:items-center justify-center p-4 sm:p-20">
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ duration: 1, ease: "easeOut" }}
+				className="fixed inset-0 z-0"
+				style={{
+					backgroundImage: 'url("/bg6.png")',
+					backgroundSize: "cover",
+					backgroundPosition: "center",
+				}}
+			/>
+
+			<div className="font-playfair flex min-h-screen items-start mt-[32vh] lg:mt-0 lg:items-center justify-center p-4 sm:p-20">
 				<main className="flex flex-col mr-5 lg:mt-10 mt-3 gap-6 sm:gap-8 text-center pb-1">
 					<ul className="flex flex-col tracking-tighter">
-						<li className="overflow-hidden font-playfair font-bold text-5xl lg:text-6xl">
+						<li className="overflow-hidden text-6xl font-playfair font-bold text-5xl lg:text-6xl">
 							<motion.h1
 								initial={{ y: 80 }}
 								animate={{ y: 0 }}
@@ -36,7 +48,7 @@ export default function Home() {
 								DiceCTF
 							</motion.h1>
 						</li>
-						<li className="overflow-hidden font-playfair font-bold text-4xl">
+						<li className="overflow-hidden text-5xl font-playfair font-bold text-4xl">
 							<motion.h1
 								initial={{ y: 80 }}
 								animate={{ y: 0 }}
@@ -46,7 +58,7 @@ export default function Home() {
 							</motion.h1>
 						</li>
 
-						<li className="overflow-hidden font-playfair font-bold text-5xl lg:text-6xl">
+						<li className="overflow-hidden text-6xl font-playfair font-bold text-5xl lg:text-6xl">
 							<motion.h1
 								initial={{ y: 80 }}
 								animate={{ y: 0 }}
