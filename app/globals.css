@@ -28,7 +28,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   color: var(--foreground);
-  font-family: Roboto Mono, monospace;
+  font-family: Helvetica Neue, sans-serif;
 }
 
 @media (max-width: 768px) {
