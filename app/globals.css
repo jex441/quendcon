@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #111118;
+  --background: #100E12;
   --foreground: #ffffff;
 }
 
@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #000000;
+    --background: #100E12;
     --foreground: #ededed;
   }
 }
@@ -22,11 +22,11 @@
 body {
   overflow-x: hidden;
   overflow-y: hidden;
-  background-color: var(--background);
-  background-image: url('/bg4.png');
-  background-size: contain;
+  background-color: #100E12;
+  background-image: url('/bg5.png');
+  background-size: 108%;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center;
   color: var(--foreground);
   font-family: Playfair Display, serif;
 }
@@ -34,8 +34,8 @@ body {
 @media (max-width: 768px) {
   body {
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: -1200px 50px;
+    background-size: 320%;
+    background-position: center top;
   }
 }
 
