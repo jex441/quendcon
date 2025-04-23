@@ -58,6 +58,7 @@ export default function Home() {
 					backgroundSize: "250%",
 					backgroundPosition: "center",
 					backgroundRepeat: "no-repeat",
+					zIndex: -2,
 				}}
 			/>
 			<motion.div
@@ -144,7 +145,7 @@ const styles = `
 		width: 100%;
 		height: 120vh;
 		pointer-events: none;
-		z-index: [-1];
+		z-index: -1;
 		overflow: hidden;
 	}
 
