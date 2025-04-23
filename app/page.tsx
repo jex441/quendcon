@@ -1,7 +1,13 @@
 "use client";
 
 import { motion } from "motion/react";
+import { Rosario } from "next/font/google";
 
+const rosario = Rosario({
+	weight: ["400", "700"],
+	style: ["normal", "italic"],
+	subsets: ["latin"],
+});
 const FlowerPetal = ({ style }: { style?: React.CSSProperties }) => (
 	<div className="flower-petal" style={style} />
 );
@@ -22,12 +28,12 @@ export default function Home() {
 
 	return (
 		<>
-			<div className="petals-container">{renderPetals()}</div>
+			<div className="petals-container min-h-screen">{renderPetals()}</div>
 
 			<motion.div
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{ duration: 1, ease: "easeOut" }}
+				initial={{ opacity: 0, scale: "90%" }}
+				animate={{ opacity: 1, scale: "100%" }}
+				transition={{ duration: 0.7, ease: "easeOut" }}
 				className="fixed inset-0 z-0"
 				style={{
 					backgroundImage: 'url("/bg6.png")',
@@ -36,33 +42,35 @@ export default function Home() {
 				}}
 			/>
 
-			<div className="font-playfair flex min-h-screen items-start mt-[32vh] lg:mt-0 lg:items-center justify-center p-4 sm:p-20">
+			<div
+				className={`font-${rosario} flex min-h-screen items-start mt-[32vh] lg:mt-0 lg:items-center justify-center p-4 sm:p-20`}
+			>
 				<main className="flex flex-col mr-5 lg:mt-10 mt-3 gap-6 sm:gap-8 text-center pb-1">
 					<ul className="flex flex-col tracking-tighter">
-						<li className="overflow-hidden text-6xl font-playfair font-bold text-5xl lg:text-6xl">
+						<li className="overflow-hidden text-6xl font-playfair font-bold text-34xl lg:text-6xl">
 							<motion.h1
 								initial={{ y: 80 }}
 								animate={{ y: 0 }}
-								transition={{ duration: 0.6, ease: "easeOut" }}
+								transition={{ duration: 0.7, ease: "easeOut" }}
 							>
 								DiceCTF
 							</motion.h1>
 						</li>
-						<li className="overflow-hidden text-5xl font-playfair font-bold text-4xl">
+						<li className="overflow-hidden text-34xl font-playfair font-bold text-4xl">
 							<motion.h1
 								initial={{ y: 80 }}
 								animate={{ y: 0 }}
-								transition={{ duration: 0.6, ease: "easeOut" }}
+								transition={{ duration: 0.7, ease: "easeOut" }}
 							>
 								x
 							</motion.h1>
 						</li>
 
-						<li className="overflow-hidden text-6xl font-playfair font-bold text-5xl lg:text-6xl">
+						<li className="overflow-hidden h-18 text-6xl font-playfair font-bold text-34xl lg:text-6xl">
 							<motion.h1
 								initial={{ y: 80 }}
 								animate={{ y: 0 }}
-								transition={{ duration: 0.6, ease: "easeOut" }}
+								transition={{ duration: 0.7, ease: "easeOut" }}
 							>
 								QuendCon
 							</motion.h1>
@@ -72,9 +80,9 @@ export default function Home() {
 					<ul className="flex flex-col tracking-tighter gap-2">
 						<li className="overflow-hidden">
 							<motion.h2
-								animate={{ opacity: 1 }}
-								initial={{ opacity: 0 }}
-								transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
+								initial={{ y: 80 }}
+								animate={{ y: 0 }}
+								transition={{ duration: 0.7, ease: "easeOut" }}
 								className="text-2xl text-blue-400"
 							>
 								July 10 + 11 2025
@@ -82,10 +90,10 @@ export default function Home() {
 						</li>
 						<li className="overflow-hidden">
 							<motion.h2
-								animate={{ opacity: 1 }}
-								initial={{ opacity: 0 }}
-								transition={{ delay: 0.5, duration: 0.2, ease: "easeOut" }}
-								className="text-2xl text-green-300"
+								initial={{ y: 80 }}
+								animate={{ y: 0 }}
+								transition={{ duration: 0.7, ease: "easeOut" }}
+								className="text-xl text-green-300"
 							>
 								Brooklyn, NY
 							</motion.h2>
@@ -101,9 +109,10 @@ const styles = `
 	.petals-container {
 		position: fixed;
 		top: -100px;
+		bottom: 0;
 		left: 0;
 		width: 100%;
-		height: 100%;
+		height: 120vh;
 		pointer-events: none;
 		z-index: -1;
 		overflow: hidden;
@@ -135,11 +144,14 @@ const styles = `
 	}
 	
 	.flower-petal:nth-child(3n + 1) {
-		background: rgba(255, 0, 128, 0.3);
+		background: rgba(129, 3, 154, 0.8);
 	}
 	
 	.flower-petal:nth-child(3n + 2) {
 		background: rgba(128, 255, 0, 0.3);
+	}
+		.flower-petal:nth-child(3n + 3) {
+		background: rgba(0, 97, 145, .8);
 	}
 `;
 

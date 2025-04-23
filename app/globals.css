@@ -24,7 +24,7 @@ body {
   overflow-y: hidden;
   background-color: #100E12;
   color: var(--foreground);
-  font-family: Helvetica Neue, sans-serif;
+  font-family: "Rosario", sans-serif;
 }
 
 @media (max-width: 768px) {
