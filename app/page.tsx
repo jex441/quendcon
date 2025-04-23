@@ -50,7 +50,16 @@ export default function Home() {
 				{renderPetals()}
 				{renderDots()}
 			</div>
-
+			<motion.div
+				className="fixed inset-0"
+				style={{
+					opacity: "10%",
+					backgroundImage: 'url("/bg7.png")',
+					backgroundSize: "250%",
+					backgroundPosition: "center",
+					backgroundRepeat: "no-repeat",
+				}}
+			/>
 			<motion.div
 				initial={{ opacity: 0, scale: "90%" }}
 				animate={{ opacity: 1, scale: "100%" }}
