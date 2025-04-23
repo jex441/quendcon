@@ -51,11 +51,11 @@ export default function Home() {
 				{renderDots()}
 			</div>
 			<motion.div
-				className="fixed inset-0"
+				className="fixed inset-0 hidden lg:block"
 				style={{
 					opacity: "10%",
-					backgroundImage: 'url("/bg7.png")',
-					backgroundSize: "250%",
+					backgroundImage: 'url("/bg8.png")',
+					backgroundSize: "150%",
 					backgroundPosition: "center",
 					backgroundRepeat: "no-repeat",
 					zIndex: -2,
