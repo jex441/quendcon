@@ -8,8 +8,13 @@ const rosario = Rosario({
 	style: ["normal", "italic"],
 	subsets: ["latin"],
 });
+
 const FlowerPetal = ({ style }: { style?: React.CSSProperties }) => (
 	<div className="flower-petal" style={style} />
+);
+
+const FloatingDot = ({ style }: { style?: React.CSSProperties }) => (
+	<div className="floating-dot" style={style} />
 );
 
 export default function Home() {
@@ -26,15 +31,31 @@ export default function Home() {
 		));
 	};
 
+	const renderDots = () => {
+		return [...Array(15)].map((_, i) => (
+			<FloatingDot
+				key={i}
+				style={{
+					left: `${Math.random() * 100}%`,
+					animationDelay: `${Math.random() * 20}s`,
+					animationDuration: `${15 + Math.random() * 15}s`,
+				}}
+			/>
+		));
+	};
+
 	return (
 		<>
-			<div className="petals-container min-h-screen">{renderPetals()}</div>
+			<div className="petals-container min-h-screen">
+				{renderPetals()}
+				{renderDots()}
+			</div>
 
 			<motion.div
 				initial={{ opacity: 0, scale: "90%" }}
 				animate={{ opacity: 1, scale: "100%" }}
 				transition={{ duration: 0.7, ease: "easeOut" }}
-				className="fixed inset-0 z-0"
+				className="fixed inset-0 z-[-2]"
 				style={{
 					backgroundImage: 'url("/bg6.png")',
 					backgroundSize: "cover",
@@ -114,7 +135,7 @@ const styles = `
 		width: 100%;
 		height: 120vh;
 		pointer-events: none;
-		z-index: -1;
+		z-index: [-1];
 		overflow: hidden;
 	}
 
@@ -134,7 +155,7 @@ const styles = `
 		}
 		100% {
 			transform: translateY(100vh) rotate(360deg);
-			opacity: 0.3;
+			opacity: 0.8;
 		}
 	}
 
@@ -152,6 +173,46 @@ const styles = `
 	}
 		.flower-petal:nth-child(3n + 3) {
 		background: rgba(0, 97, 145, .8);
+	}
+
+	.floating-dot {
+		position: absolute;
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		animation: floatingDot linear infinite;
+	}
+
+	@keyframes floatingDot {
+		0% {
+			transform: translateY(-10vh) translateX(0) rotate(0deg);
+			opacity: 0.8;
+		}
+		50% {
+			transform: translateY(30vh) translateX(100px) rotate(180deg);
+			opacity: 1;
+		}
+		100% {
+			transform: translateY(100vh) translateX(0) rotate(360deg);
+			opacity: 0.8;
+		}
+	}
+
+	/* Add variety to dot colors */
+	.floating-dot:nth-child(4n) {
+		background: rgba(109, 205, 0, 0.6); /* Golden yellow */
+	}
+	
+	.floating-dot:nth-child(4n + 1) {
+		background: rgba(0, 191, 255, 0.6); /* Deep sky blue */
+	}
+	
+	.floating-dot:nth-child(4n + 2) {
+		background: rgba(255, 105, 180, 0.6); /* Hot pink */
+	}
+	
+	.floating-dot:nth-child(4n + 3) {
+		background: rgba(50, 205, 50, 0.6); /* Lime green */
 	}
 `;
 
