@@ -55,9 +55,9 @@ export default function Home() {
 				initial={{ opacity: 0, scale: "90%" }}
 				animate={{ opacity: 1, scale: "100%" }}
 				transition={{ duration: 0.7, ease: "easeOut" }}
-				className="fixed inset-0 z-[-2]"
+				className="fixed inset-0"
 				style={{
-					backgroundImage: 'url("/bg6.png")',
+					backgroundImage: 'url("/bg7.png")',
 					backgroundSize: "cover",
 					backgroundPosition: "center",
 				}}
