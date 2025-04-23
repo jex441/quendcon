@@ -57,7 +57,7 @@ export default function Home() {
 				transition={{ duration: 0.7, ease: "easeOut" }}
 				className="fixed inset-0"
 				style={{
-					backgroundImage: 'url("/bg7.png")',
+					backgroundImage: 'url("/bg6.png")',
 					backgroundSize: "cover",
 					backgroundPosition: "center",
 				}}
