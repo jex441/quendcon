@@ -50,28 +50,29 @@ export default function Home() {
 				{renderPetals()}
 				{renderDots()}
 			</div>
+
+			<head>
+				<link rel="preload" href="/bg6.png" as="image" />
+				<link rel="preload" href="/bg8.png" as="image" />
+			</head>
+
 			<motion.div
-				className="fixed inset-0 hidden lg:block"
+				className="fixed inset-0 hidden lg:block bg-texture"
 				style={{
 					opacity: "10%",
-					backgroundImage: 'url("/bg8.png")',
-					backgroundSize: "150%",
-					backgroundPosition: "center",
-					backgroundRepeat: "no-repeat",
 					zIndex: -2,
 				}}
+				data-bg-url="/bg8.png"
 			/>
 			<motion.div
 				initial={{ opacity: 0, scale: "90%" }}
 				animate={{ opacity: 1, scale: "100%" }}
 				transition={{ duration: 0.7, ease: "easeOut" }}
-				className="fixed inset-0"
+				className="fixed inset-0 main-bg"
 				style={{
-					backgroundImage: 'url("/bg6.png")',
-					backgroundSize: "cover",
-					backgroundPosition: "center",
 					zIndex: 1,
 				}}
+				data-bg-url="/bg6.png"
 			/>
 
 			<div
@@ -226,10 +227,51 @@ const styles = `
 	.floating-dot:nth-child(4n + 3) {
 		background: rgba(50, 205, 50, 0.6); /* Lime green */
 	}
+
+	/* Background image optimization classes */
+	.bg-texture {
+		background-size: 150%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url('/bg8.png');
+		will-change: transform; /* Hint to browser to optimize */
+	}
+	
+	.main-bg {
+		background-size: cover;
+		background-position: center;
+		background-image: url('/bg6.png');
+		will-change: transform;
+	}
+	
+	/* Progressive loading for background images */
+	@media (prefers-reduced-data: reduce) {
+		.bg-texture, .main-bg {
+			background-image: none;
+		}
+	}
+	
+	/* Add responsive image handling */
+	@media (max-width: 768px) {
+		.main-bg {
+			background-image: url('/bg6-small.png'); /* Consider creating a smaller version */
+		}
+	}
 `;
 
 if (typeof document !== "undefined") {
 	const styleSheet = document.createElement("style");
 	styleSheet.innerText = styles;
 	document.head.appendChild(styleSheet);
+
+	// Progressive image loading
+	window.addEventListener("load", () => {
+		// Set full quality images after page load
+		document.querySelectorAll("[data-bg-url]").forEach((el) => {
+			const url = el.getAttribute("data-bg-url");
+			if (url) {
+				(el as HTMLElement).style.backgroundImage = `url(${url})`;
+			}
+		});
+	});
 }
