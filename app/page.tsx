@@ -76,7 +76,7 @@ export default function Home() {
 			/>
 
 			<div
-				className={`font-${rosario} flex min-h-screen items-start mt-[28vh] lg:mt-0 lg:items-center justify-center p-4 sm:p-20`}
+				className={`font-${rosario} flex min-h-screen items-start mt-[27vh] lg:mt-0 lg:items-center justify-center p-4 sm:p-20`}
 				style={{ position: "relative", zIndex: 1 }}
 			>
 				<main className="flex flex-col mr-5 lg:mt-10 mt-3 gap-1 lg:gap-8 text-center pb-1">
@@ -90,7 +90,7 @@ export default function Home() {
 								DiceCTF
 							</motion.h1>
 						</li>
-						<li className="overflow-hidden font-playfair font-bold text-4xl">
+						<li className="overflow-hidden font-playfair font-bold text-2xl lg:text-4xl">
 							<motion.h1
 								initial={{ y: 80 }}
 								animate={{ y: 0 }}
