@@ -76,7 +76,7 @@ export default function Home() {
 			/>
 
 			<div
-				className={`font-${rosario} flex min-h-screen items-start mt-[32vh] lg:mt-0 lg:items-center justify-center p-4 sm:p-20`}
+				className={`font-${rosario} flex min-h-screen items-start mt-[24vh] lg:mt-0 lg:items-center justify-center p-4 sm:p-20`}
 				style={{ position: "relative", zIndex: 1 }}
 			>
 				<main className="flex flex-col mr-5 lg:mt-10 mt-3 gap-6 sm:gap-8 text-center pb-1">
