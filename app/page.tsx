@@ -76,10 +76,10 @@ export default function Home() {
 			/>
 
 			<div
-				className={`font-${rosario} flex min-h-screen items-start mt-[24vh] lg:mt-0 lg:items-center justify-center p-4 sm:p-20`}
+				className={`font-${rosario} flex min-h-screen items-start mt-[30vh] lg:mt-0 lg:items-center justify-center p-4 sm:p-20`}
 				style={{ position: "relative", zIndex: 1 }}
 			>
-				<main className="flex flex-col mr-5 lg:mt-10 mt-3 gap-4 lg:gap-8 text-center pb-1">
+				<main className="flex flex-col mr-5 lg:mt-10 mt-3 gap-2 lg:gap-8 text-center pb-1">
 					<ul className="flex flex-col tracking-tighter">
 						<li className="overflow-hidden text-5xl font-playfair font-bold text-34xl lg:text-6xl">
 							<motion.h1
