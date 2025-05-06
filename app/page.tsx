@@ -57,12 +57,7 @@ export default function Home() {
 			</head>
 
 			<motion.div
-				className="fixed inset-0 opacity-5 lg:opacity-10 lg:block bg-texture"
-				style={{
-					backgroundSize: "370%",
-					backgroundPosition: "bottom",
-					zIndex: -2,
-				}}
+				className="bg fixed inset-0 opacity-5 block lg:opacity-10 bg-texture"
 				data-bg-url="/bg8.png"
 			/>
 			<motion.div
@@ -177,17 +172,28 @@ const styles = `
 	.flower-petal:nth-child(3n) {
 		background: rgba(0, 255, 255, 0.3);
 	}
-	
 	.flower-petal:nth-child(3n + 1) {
 		background: rgba(129, 3, 154, 0.8);
 	}
-	
 	.flower-petal:nth-child(3n + 2) {
 		background: rgba(128, 255, 0, 0.3);
 	}
-		.flower-petal:nth-child(3n + 3) {
+	.flower-petal:nth-child(3n + 3) {
 		background: rgba(0, 97, 145, .8);
 	}
+	.flower-petal:nth-child(3n + 4) {
+		background: rgba(255, 0, 0, 0.3);
+		width: 10px;
+		height: 15px;
+		opacity: 0.5;
+	}
+	.flower-petal:nth-child(3n + 5) {
+		background: rgba(0, 255, 0, 0.3);
+		width: 5px;
+		height: 10px;
+		opacity: 0.5;
+	}
+	
 
 	.floating-dot {
 		position: absolute;
