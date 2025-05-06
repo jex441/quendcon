@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-	title: "DiceCTF x QuenCon",
-	description: "DiceCTF x QuenCon",
+	title: "DiceCTF x QuendCon",
+	description: "DiceCTF x QuendCon",
 };
 
 export default function RootLayout({

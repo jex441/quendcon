@@ -57,9 +57,10 @@ export default function Home() {
 			</head>
 
 			<motion.div
-				className="fixed inset-0 hidden lg:block bg-texture"
+				className="fixed inset-0 opacity-5 lg:opacity-10 lg:block bg-texture"
 				style={{
-					opacity: "10%",
+					backgroundSize: "370%",
+					backgroundPosition: "bottom",
 					zIndex: -2,
 				}}
 				data-bg-url="/bg8.png"
