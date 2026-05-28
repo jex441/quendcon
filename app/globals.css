@@ -21,7 +21,6 @@
 
 body {
   overflow-x: hidden;
-  overflow-y: hidden;
   background-color: #100E12;
   color: var(--foreground);
   font-family: "Rosario", sans-serif;
