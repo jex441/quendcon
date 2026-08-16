@@ -858,28 +858,42 @@ export default function Home() {
 					<div className="schedule-entry">
 						<span className="entry-time">1:00 PM</span>
 						<div>
-							<span className="entry-title">Lightning Talk 1</span>
+							<span className="entry-title">
+								Lightning Talk 1 — Rick de Jager
+							</span>
+							<div className="entry-sub">Tesla Charger RCE</div>
 							<div className="entry-tag tag-talk">Talk</div>
 						</div>
 					</div>
 					<div className="schedule-entry">
 						<span className="entry-time">1:30 PM</span>
 						<div>
-							<span className="entry-title">Lightning Talk 2</span>
+							<span className="entry-title">
+								Lightning Talk 2 — Michael Cowell
+							</span>
+							<div className="entry-sub">
+								Terrible LaunchDaemons and where to find them
+							</div>
 							<div className="entry-tag tag-talk">Talk</div>
 						</div>
 					</div>
 					<div className="schedule-entry">
 						<span className="entry-time">2:00 PM</span>
 						<div>
-							<span className="entry-title">Lightning Talk 3</span>
+							<span className="entry-title">
+								Lightning Talk 3 — Jacob Denbeaux
+							</span>
+							<div className="entry-sub">Stunt Programming through the Ages</div>
 							<div className="entry-tag tag-talk">Talk</div>
 						</div>
 					</div>
 					<div className="schedule-entry">
 						<span className="entry-time">2:30 PM</span>
 						<div>
-							<span className="entry-title">Lightning Talk 4</span>
+							<span className="entry-title">
+								Lightning Talk 4 — Shiloh Smiles
+							</span>
+							<div className="entry-sub">Physical Pen Testing</div>
 							<div className="entry-tag tag-talk">Talk</div>
 						</div>
 					</div>
@@ -887,8 +901,38 @@ export default function Home() {
 						<span className="entry-time">3:00 PM</span>
 						<div>
 							<span className="entry-title">
-								Open Networking &amp; Sponsor Tables
+								Lightning Talk 5 — AwkwardSilence
 							</span>
+							<div className="entry-tag tag-talk">Talk</div>
+						</div>
+					</div>
+					<div className="schedule-entry">
+						<span className="entry-time">3:30 PM</span>
+						<div>
+							<span className="entry-title">
+								Lightning Talk 6 — Quasar Independent
+							</span>
+							<div className="entry-sub">Telegram 1 clicks</div>
+							<div className="entry-tag tag-talk">Talk</div>
+						</div>
+					</div>
+					<div className="schedule-entry">
+						<span className="entry-time">4:00 PM</span>
+						<div>
+							<span className="entry-title">Lightning Talk 7 — Jay Little</span>
+							<div className="entry-sub">
+								The Shapes of Auditing Harnesses
+							</div>
+							<div className="entry-tag tag-talk">Talk</div>
+						</div>
+					</div>
+					<div className="schedule-entry">
+						<span className="entry-time">4:30 PM</span>
+						<div>
+							<span className="entry-title">
+								Lightning Talk 8 — Robert Chen
+							</span>
+							<div className="entry-tag tag-talk">Talk</div>
 						</div>
 					</div>
 					<div className="schedule-entry">
@@ -928,74 +972,10 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="schedule-entry">
-						<span className="entry-time">10:00 AM</span>
-						<div>
-							<span className="entry-title">Lightning Talk 1</span>
-							<div className="entry-tag tag-talk">Talk</div>
-						</div>
-					</div>
-					<div className="schedule-entry">
-						<span className="entry-time">10:30 AM</span>
-						<div>
-							<span className="entry-title">Lightning Talk 2</span>
-							<div className="entry-tag tag-talk">Talk</div>
-						</div>
-					</div>
-					<div className="schedule-entry">
-						<span className="entry-time">11:00 AM</span>
-						<div>
-							<span className="entry-title">Lightning Talk 3</span>
-							<div className="entry-tag tag-talk">Talk</div>
-						</div>
-					</div>
-					<div className="schedule-entry">
-						<span className="entry-time">11:30 AM</span>
-						<div>
-							<span className="entry-title">Lightning Talk 4</span>
-							<div className="entry-tag tag-talk">Talk</div>
-						</div>
-					</div>
-					<div className="schedule-entry">
 						<span className="entry-time">12:00 PM</span>
 						<div>
 							<span className="entry-title">Lunch</span>
 							<div className="entry-tag tag-food">Food</div>
-						</div>
-					</div>
-					<div className="schedule-entry">
-						<span className="entry-time">1:00 PM</span>
-						<div>
-							<span className="entry-title">Lightning Talk 5</span>
-							<div className="entry-tag tag-talk">Talk</div>
-						</div>
-					</div>
-					<div className="schedule-entry">
-						<span className="entry-time">1:30 PM</span>
-						<div>
-							<span className="entry-title">Lightning Talk 6</span>
-							<div className="entry-tag tag-talk">Talk</div>
-						</div>
-					</div>
-					<div className="schedule-entry">
-						<span className="entry-time">2:00 PM</span>
-						<div>
-							<span className="entry-title">Lightning Talk 7</span>
-							<div className="entry-tag tag-talk">Talk</div>
-						</div>
-					</div>
-					<div className="schedule-entry">
-						<span className="entry-time">2:30 PM</span>
-						<div>
-							<span className="entry-title">Lightning Talk 8</span>
-							<div className="entry-tag tag-talk">Talk</div>
-						</div>
-					</div>
-					<div className="schedule-entry">
-						<span className="entry-time">3:00 PM</span>
-						<div>
-							<span className="entry-title">
-								Open Networking &amp; Sponsor Tables
-							</span>
 						</div>
 					</div>
 					<div className="schedule-entry">
