@@ -394,6 +394,13 @@ section {
   border-bottom: none;
 }
 
+.schedule-entry > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
 .entry-time {
   font-size: 0.75rem;
   letter-spacing: 0.1em;
@@ -403,12 +410,17 @@ section {
 }
 
 .entry-title {
+  display: block;
+  flex: 1 1 0;
+  min-width: 0;
   font-size: 0.95rem;
   color: var(--text);
   font-weight: 400;
 }
 
 .entry-sub {
+  order: 2;
+  flex-basis: 100%;
   font-size: 0.8rem;
   color: var(--muted);
   margin-top: 0.2rem;
@@ -416,12 +428,13 @@ section {
 
 .entry-tag {
   display: inline-block;
+  order: 1;
   font-size: 0.65rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   padding: 0.2rem 0.6rem;
   border-radius: 2px;
-  margin-top: 0.4rem;
+  margin-top: 0;
 }
 
 .tag-talk {
@@ -538,7 +551,7 @@ section {
 }
 
 .tier-perks li::before {
-  content: "—";
+  content: "-";
   color: var(--purple);
   margin-right: 0.5rem;
 }
@@ -722,7 +735,7 @@ export default function Home() {
 			</nav>
 
 			<section id="hero">
-				<p className="hero-eyebrow">Margin Research x DiceCTF presents</p>
+				<p className="hero-eyebrow">Margin Research x DiceGang presents</p>
 				<h1 className="hero-title">
 					QuendCon
 					<span className="hero-year">2026</span>
@@ -740,13 +753,13 @@ export default function Home() {
 			</section>
 
 			<section id="about">
-				<span className="section-label">What is QuendCon</span>
+				<span className="section-label">What is QuendCon?</span>
 				<h2 className="section-title">
 					Where security&apos;s best minds gather
 				</h2>
 				<div className="about-body">
 					<p>
-						QuendCon is a gathering place for the security and CTF community — a
+						QuendCon is a gathering place for the security and CTF community - a
 						space designed for collaboration, competition, and the kind of
 						knowledge sharing that only happens when top talent is in the same
 						room.
@@ -758,8 +771,8 @@ export default function Home() {
 						conversations that define careers.
 					</p>
 					<p>
-						The event draws its name from the Calaquendi — the elves of light in
-						Tolkien&apos;s lore — a nod to the brilliant, relentless minds who
+						The event draws its name from the Calaquendi - the elves of light in
+						Tolkien&apos;s lore - a nod to the brilliant, relentless minds who
 						make this community what it is.
 					</p>
 				</div>
@@ -790,7 +803,7 @@ export default function Home() {
 						<p>
 							Twelve teams of four go head-to-head across challenges spanning
 							reversing, binary exploitation, web, hardware, cryptography, and
-							more — each designed to surface the sharpest technical minds in
+							more - each designed to surface the sharpest technical minds in
 							the community.
 						</p>
 					</div>
@@ -798,8 +811,8 @@ export default function Home() {
 						<h3>Lightning Talks</h3>
 						<p>
 							Focused 20-minute talks from researchers, practitioners, and
-							competitors. Fast-paced, high-signal presentations covering the
-							topics that are actually moving the field — no fluff.
+							competitors. Fast-paced presentations covering critical topics
+							in security.
 						</p>
 					</div>
 				</div>
@@ -807,19 +820,18 @@ export default function Home() {
 
 			<section id="schedule">
 				<span className="section-label">Agenda</span>
-				<h2 className="section-title">August 29 – 30, 2026</h2>
 				<div className="schedule-tabs">
 					<button
 						className={`tab-btn${activeDay === "day1" ? " active" : ""}`}
 						onClick={() => setActiveDay("day1")}
 					>
-						Day 1 — Aug 29
+						Day 1 - Aug 29
 					</button>
 					<button
 						className={`tab-btn${activeDay === "day2" ? " active" : ""}`}
 						onClick={() => setActiveDay("day2")}
 					>
-						Day 2 — Aug 30
+						Day 2 - Aug 30
 					</button>
 				</div>
 
@@ -843,7 +855,7 @@ export default function Home() {
 					<div className="schedule-entry">
 						<span className="entry-time">10:00 AM</span>
 						<div>
-							<span className="entry-title">Hackathon Begins</span>
+							<span className="entry-title">CTF Begins</span>
 							<div className="entry-tag tag-hackathon">CTF</div>
 							<div className="entry-sub">Sponsor tables open all day</div>
 						</div>
@@ -859,7 +871,7 @@ export default function Home() {
 						<span className="entry-time">1:00 PM</span>
 						<div>
 							<span className="entry-title">
-								Lightning Talk 1 — Rick de Jager
+								Lightning Talk 1 - Rick de Jager
 							</span>
 							<div className="entry-sub">Tesla Charger RCE</div>
 							<div className="entry-tag tag-talk">Talk</div>
@@ -869,7 +881,7 @@ export default function Home() {
 						<span className="entry-time">1:30 PM</span>
 						<div>
 							<span className="entry-title">
-								Lightning Talk 2 — Michael Cowell
+								Lightning Talk 2 - Michael Cowell
 							</span>
 							<div className="entry-sub">
 								Terrible LaunchDaemons and where to find them
@@ -881,7 +893,7 @@ export default function Home() {
 						<span className="entry-time">2:00 PM</span>
 						<div>
 							<span className="entry-title">
-								Lightning Talk 3 — Jacob Denbeaux
+								Lightning Talk 3 - Jacob Denbeaux
 							</span>
 							<div className="entry-sub">Stunt Programming through the Ages</div>
 							<div className="entry-tag tag-talk">Talk</div>
@@ -891,7 +903,7 @@ export default function Home() {
 						<span className="entry-time">2:30 PM</span>
 						<div>
 							<span className="entry-title">
-								Lightning Talk 4 — Shiloh Smiles
+								Lightning Talk 4 - Shiloh Smiles
 							</span>
 							<div className="entry-sub">Physical Pen Testing</div>
 							<div className="entry-tag tag-talk">Talk</div>
@@ -901,7 +913,7 @@ export default function Home() {
 						<span className="entry-time">3:00 PM</span>
 						<div>
 							<span className="entry-title">
-								Lightning Talk 5 — AwkwardSilence
+								Lightning Talk 5 - AwkwardSilence
 							</span>
 							<div className="entry-tag tag-talk">Talk</div>
 						</div>
@@ -910,7 +922,7 @@ export default function Home() {
 						<span className="entry-time">3:30 PM</span>
 						<div>
 							<span className="entry-title">
-								Lightning Talk 6 — Quasar Independent
+								Lightning Talk 6 - Quasar
 							</span>
 							<div className="entry-sub">Telegram 1 clicks</div>
 							<div className="entry-tag tag-talk">Talk</div>
@@ -919,7 +931,7 @@ export default function Home() {
 					<div className="schedule-entry">
 						<span className="entry-time">4:00 PM</span>
 						<div>
-							<span className="entry-title">Lightning Talk 7 — Jay Little</span>
+							<span className="entry-title">Lightning Talk 7 - Jay Little</span>
 							<div className="entry-sub">
 								The Shapes of Auditing Harnesses
 							</div>
@@ -930,15 +942,18 @@ export default function Home() {
 						<span className="entry-time">4:30 PM</span>
 						<div>
 							<span className="entry-title">
-								Lightning Talk 8 — Robert Chen
+								Lightning Talk 8 - Robert Chen &amp; Michael Debono
 							</span>
+							<div className="entry-sub">
+								Save CTFs Fund
+							</div>
 							<div className="entry-tag tag-talk">Talk</div>
 						</div>
 					</div>
 					<div className="schedule-entry">
 						<span className="entry-time">5:00 PM</span>
 						<div>
-							<span className="entry-title">Hackathon Day 1 ends</span>
+							<span className="entry-title">CTF Day 1 ends</span>
 							<div className="entry-tag tag-hackathon">CTF</div>
 						</div>
 					</div>
@@ -969,6 +984,7 @@ export default function Home() {
 						<span className="entry-time">9:45 AM</span>
 						<div>
 							<span className="entry-title">Day 2 Kickoff</span>
+              <div className="entry-tag tag-hackathon">CTF</div>
 						</div>
 					</div>
 					<div className="schedule-entry">
@@ -978,26 +994,19 @@ export default function Home() {
 							<div className="entry-tag tag-food">Food</div>
 						</div>
 					</div>
-					<div className="schedule-entry">
-						<span className="entry-time">4:00 PM</span>
-						<div>
-							<span className="entry-title">
-								Hackathon Results &amp; Awards Ceremony
-							</span>
-							<div className="entry-tag tag-awards">Awards</div>
-						</div>
-					</div>
+					
 					<div className="schedule-entry">
 						<span className="entry-time">5:00 PM</span>
 						<div>
 							<span className="entry-title">
-								Hackathon ends &amp; Closing Remarks
+								CTF ends &amp; Closing Remarks
 							</span>
+              <div className="entry-tag tag-awards">Awards</div>
 							<div className="entry-tag tag-hackathon">CTF</div>
 						</div>
 					</div>
 					<div className="schedule-entry">
-						<span className="entry-time">5:00 PM</span>
+						<span className="entry-time">5:30 PM</span>
 						<div>
 							<span className="entry-title">Networking &amp; Farewell</span>
 							<div className="entry-tag tag-social">Social</div>
@@ -1054,9 +1063,6 @@ export default function Home() {
 						talks, and the security community at its best.
 					</p>
 					<a href="mailto:chelsea@margin.re" className="btn btn-primary">
-						Register interest
-					</a>
-					<a href="mailto:chelsea@margin.re" className="btn btn-ghost">
 						Contact us
 					</a>
 				</div>
@@ -1065,7 +1071,7 @@ export default function Home() {
 			<footer>
 				<span className="footer-logo">QuendCon 2026</span>
 				<span className="footer-copy">
-					August 29–30 · OS NYC · New York, NY
+					August 29–30 · OS NYC · New York City, NY
 				</span>
 			</footer>
 		</>
