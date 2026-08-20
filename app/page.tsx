@@ -459,10 +459,108 @@ section {
 }
 
 #sponsors {
-  padding: 7rem 2rem;
+  padding: 7rem 2rem 5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#support {
+  padding: 5rem 2rem 7rem;
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
+}
+
+.sponsor-levels {
+  display: grid;
+  gap: 2.5rem;
+  margin-top: 3.5rem;
+}
+
+.sponsor-level {
+  display: grid;
+  gap: 1rem;
+}
+
+.sponsor-tier-name {
+  color: var(--muted);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.sponsor-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.sponsor-logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 112px;
+  padding: 1.25rem;
+  border: 0.5px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg2);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.sponsor-logo-link:hover {
+  border-color: rgba(180, 127, 255, 0.55);
+  transform: translateY(-2px);
+}
+
+.sponsor-logo {
+  width: 100%;
+  height: 72px;
+  overflow: hidden;
+  filter: brightness(0) invert(1);
+}
+
+.sponsor-level.gold .sponsor-logo-grid {
+  grid-template-columns: minmax(280px, 460px);
+  justify-content: center;
+}
+
+.sponsor-level.gold .sponsor-logo-link {
+  min-height: 190px;
+  padding: 1.5rem 2.5rem;
+  border-color: rgba(255, 196, 0, 0.3);
+}
+
+.sponsor-level.gold .sponsor-logo {
+  height: 150px;
+}
+
+.sponsor-level.platform .sponsor-logo-grid {
+  grid-template-columns: minmax(180px, 200px);
+  justify-content: center;
+}
+
+.sponsor-level.platform .sponsor-logo-link {
+  min-height: 88px;
+  padding: 0.75rem;
+}
+
+.sponsor-level.platform .sponsor-logo {
+  height: 50px;
+}
+
+.sponsor-level.bronze .sponsor-logo-grid {
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+}
+
+.sponsor-level.bronze .sponsor-logo-link {
+  min-height: 92px;
+  padding: 1rem;
+}
+
+.sponsor-level.bronze .sponsor-logo {
+  height: 52px;
 }
 
 .sponsor-tiers {
@@ -699,6 +797,87 @@ footer {
 
 export default function Home() {
 	const [activeDay, setActiveDay] = useState<"day1" | "day2">("day1");
+	const sponsorTiers = [
+		{
+			name: "Gold",
+			className: "gold",
+			sponsors: [
+				{
+					name: "Margin",
+					url: "https://margin.re/",
+					viewBox: "530 0 950 700",
+				},
+			],
+		},
+		{
+			name: "Silver",
+			className: "silver",
+			sponsors: [
+				{
+					name: "Catalyst Security",
+					url: "https://catalystsecurity.com/",
+					viewBox: "413 1393 525 202",
+				},
+				{
+					name: "Interrupt Labs",
+					url: "https://www.interruptlabs.co.uk/",
+					viewBox: "100 1000 900 300",
+				},
+				{
+					name: "Vigilant Labs",
+					url: "https://www.vigilantlabs.com/",
+					viewBox: "1169 1358 309 271",
+				},
+				{
+					name: "Zellic",
+					url: "https://www.zellic.io/blog/the-auditooor-grindset/",
+					viewBox: "1138 1073 696 194",
+				},
+			],
+		},
+		{
+			name: "Platform",
+			className: "platform",
+			sponsors: [
+				{
+					name: "OtterSec",
+					url: "https://ottersec.io/",
+					viewBox: "581 775 842 171",
+				},
+			],
+		},
+		{
+			name: "Bronze",
+			className: "bronze",
+			sponsors: [
+				{
+					name: "Battelle",
+					url: "https://www.battelle.org/",
+					viewBox: "1045 1984 585 95",
+				},
+				{
+					name: "Kudu Dynamics",
+					url: "https://www.kududyn.com/",
+					viewBox: "181 1720 192 174",
+				},
+				{
+					name: "Nightwing",
+					url: "https://nightwing.com/",
+					viewBox: "491 1785 585 44",
+				},
+				{
+					name: "OpenAI",
+					url: "https://openai.com/",
+					viewBox: "400 1950 560 170",
+				},
+				{
+					name: "Trail of Bits",
+					url: "https://www.trailofbits.com/",
+					viewBox: "1610 1739 225 136",
+				},
+			],
+		},
+	];
 
 	return (
 		<>
@@ -727,6 +906,9 @@ export default function Home() {
 					</li>
 					<li>
 						<a href="#sponsors">Sponsors</a>
+					</li>
+					<li>
+						<a href="#support">Support</a>
 					</li>
 					<li>
 						<a href="#cta">Register</a>
@@ -868,97 +1050,54 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="schedule-entry">
-						<span className="entry-time">1:00 PM</span>
+            <span className="entry-time">2:00 PM</span>
 						<div>
 							<span className="entry-title">
-								Lightning Talk 1 - Rick de Jager
+                Talk 1 - Jacob Denbeaux
 							</span>
-							<div className="entry-sub">Tesla Charger RCE</div>
+              <div className="entry-sub">Stunt Programming through the Ages</div>
 							<div className="entry-tag tag-talk">Talk</div>
 						</div>
 					</div>
 					<div className="schedule-entry">
-						<span className="entry-time">1:30 PM</span>
+            <span className="entry-time">2:30 PM</span>
 						<div>
 							<span className="entry-title">
-								Lightning Talk 2 - Michael Cowell
+                Talk 2 - Rick de Jager
 							</span>
-							<div className="entry-sub">
-								Terrible LaunchDaemons and where to find them
-							</div>
+              <div className="entry-sub">Tesla Charger RCE</div>
 							<div className="entry-tag tag-talk">Talk</div>
 						</div>
 					</div>
 					<div className="schedule-entry">
-						<span className="entry-time">2:00 PM</span>
+            <span className="entry-time">3:00 PM</span>
 						<div>
 							<span className="entry-title">
-								Lightning Talk 3 - Jacob Denbeaux
+                Talk 3 - AwkwardSilence
 							</span>
-							<div className="entry-sub">Stunt Programming through the Ages</div>
+              <div className="entry-sub">Shifting Tides</div>
 							<div className="entry-tag tag-talk">Talk</div>
 						</div>
 					</div>
 					<div className="schedule-entry">
-						<span className="entry-time">2:30 PM</span>
+            <span className="entry-time">3:30 PM</span>
 						<div>
 							<span className="entry-title">
-								Lightning Talk 4 - Shiloh Smiles
+                Talk 4 - Jay Little
 							</span>
-							<div className="entry-sub">Physical Pen Testing</div>
+              <div className="entry-sub">The Shapes of Auditing Harnesses</div>
 							<div className="entry-tag tag-talk">Talk</div>
 						</div>
 					</div>
 					<div className="schedule-entry">
-						<span className="entry-time">3:00 PM</span>
-						<div>
-							<span className="entry-title">
-								Lightning Talk 5 - AwkwardSilence
-							</span>
-							<div className="entry-tag tag-talk">Talk</div>
-						</div>
-					</div>
-					<div className="schedule-entry">
-						<span className="entry-time">3:30 PM</span>
-						<div>
-							<span className="entry-title">
-								Lightning Talk 6 - Quasar
-							</span>
-							<div className="entry-sub">Telegram 1 clicks</div>
-							<div className="entry-tag tag-talk">Talk</div>
-						</div>
-					</div>
-					<div className="schedule-entry">
-						<span className="entry-time">4:00 PM</span>
-						<div>
-							<span className="entry-title">Lightning Talk 7 - Jay Little</span>
-							<div className="entry-sub">
-								The Shapes of Auditing Harnesses
-							</div>
-							<div className="entry-tag tag-talk">Talk</div>
-						</div>
-					</div>
-					<div className="schedule-entry">
-						<span className="entry-time">4:30 PM</span>
-						<div>
-							<span className="entry-title">
-								Lightning Talk 8 - Robert Chen &amp; Michael Debono
-							</span>
-							<div className="entry-sub">
-								Save CTFs Fund
-							</div>
-							<div className="entry-tag tag-talk">Talk</div>
-						</div>
-					</div>
-					<div className="schedule-entry">
-						<span className="entry-time">5:00 PM</span>
+						<span className="entry-time">6:00 PM</span>
 						<div>
 							<span className="entry-title">CTF Day 1 ends</span>
 							<div className="entry-tag tag-hackathon">CTF</div>
 						</div>
 					</div>
 					<div className="schedule-entry">
-						<span className="entry-time">5:00 PM</span>
+						<span className="entry-time">6:00 PM</span>
 						<div>
 							<span className="entry-title">
 								Light Refreshments &amp; Networking
@@ -984,25 +1123,71 @@ export default function Home() {
 						<span className="entry-time">9:45 AM</span>
 						<div>
 							<span className="entry-title">Day 2 Kickoff</span>
+						</div>
+					</div>
+          	<div className="schedule-entry">
+						<span className="entry-time">10:00 AM</span>
+						<div>
+							<span className="entry-title">CTF Day 2 Starts</span>
               <div className="entry-tag tag-hackathon">CTF</div>
 						</div>
 					</div>
 					<div className="schedule-entry">
-						<span className="entry-time">12:00 PM</span>
+						<span className="entry-time">12:30 PM</span>
 						<div>
 							<span className="entry-title">Lunch</span>
 							<div className="entry-tag tag-food">Food</div>
 						</div>
 					</div>
-					
+          <div className="schedule-entry">
+            <span className="entry-time">1:30 PM</span>
+            <div>
+              <span className="entry-title">Talk 1 - Quasar</span>
+              <div className="entry-sub">Telegram 1 Clicks</div>
+              <div className="entry-tag tag-talk">Talk</div>
+            </div>
+          </div>
+          <div className="schedule-entry">
+            <span className="entry-time">2:00 PM</span>
+            <div>
+              <span className="entry-title">Talk 2 - Shiloh Smiles</span>
+              <div className="entry-sub">Physical Pen Testing</div>
+              <div className="entry-tag tag-talk">Talk</div>
+            </div>
+          </div>
+          <div className="schedule-entry">
+            <span className="entry-time">2:30 PM</span>
+            <div>
+              <span className="entry-title">Talk 3 - Michael Cowell</span>
+              <div className="entry-sub">Terrible LaunchDaemons and where to find them</div>
+              <div className="entry-tag tag-talk">Talk</div>
+            </div>
+          </div>
+          <div className="schedule-entry">
+            <span className="entry-time">3:00 PM</span>
+            <div>
+              <span className="entry-title">Talk 4 - Robert Chen with Michael Debono</span>
+              <div className="entry-sub">Save CTFs Fund</div>
+              <div className="entry-tag tag-talk">Talk</div>
+            </div>
+          </div>
+
 					<div className="schedule-entry">
-						<span className="entry-time">5:00 PM</span>
+						<span className="entry-time">4:30 PM</span>
 						<div>
 							<span className="entry-title">
-								CTF ends &amp; Closing Remarks
+								CTF ends
 							</span>
               <div className="entry-tag tag-awards">Awards</div>
 							<div className="entry-tag tag-hackathon">CTF</div>
+						</div>
+					</div>
+
+          <div className="schedule-entry">
+						<span className="entry-time">5:00 PM</span>
+						<div>
+							<span className="entry-title">Closing Remarks</span>
+							<div className="entry-tag tag-awards">Awards</div>
 						</div>
 					</div>
 					<div className="schedule-entry">
@@ -1013,11 +1198,62 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-			</section>
+        </section>
 
 			<section id="sponsors">
+				<span className="section-label">Meet Our Partners</span>
+				<h2 className="section-title">Sponsors</h2>
+				<div className="sponsor-levels">
+					{sponsorTiers.map((tier) => (
+						<div className={`sponsor-level ${tier.className}`} key={tier.name}>
+							<span className="sponsor-tier-name">{tier.name}</span>
+							<div className="sponsor-logo-grid">
+								{tier.sponsors.map((sponsor) => (
+									(() => {
+										const [x, y, width, height] = sponsor.viewBox.split(" ");
+										const clipId = `sponsor-crop-${sponsor.name
+											.toLowerCase()
+											.replace(/[^a-z0-9]+/g, "-")}`;
+
+										return (
+									<a
+										className="sponsor-logo-link"
+										href={sponsor.url}
+										key={sponsor.name}
+										target="_blank"
+										rel="noreferrer"
+										aria-label={`Visit ${sponsor.name}`}
+									>
+										<svg
+											className="sponsor-logo"
+											viewBox={sponsor.viewBox}
+											aria-hidden="true"
+										>
+											<defs>
+												<clipPath id={clipId}>
+													<rect x={x} y={y} width={width} height={height} />
+												</clipPath>
+											</defs>
+											<image
+												href="/sponsors/sponsor-logos.svg"
+												width="2000"
+												height="2200"
+												clipPath={`url(#${clipId})`}
+											/>
+										</svg>
+									</a>
+										);
+									})()
+								))}
+							</div>
+						</div>
+					))}
+				</div>
+			</section>
+
+			<section id="support">
 				<span className="section-label">Support QuendCon</span>
-				<h2 className="section-title">Sponsorship</h2>
+				<h2 className="section-title">Support</h2>
 				<div className="sponsor-tiers">
 					<div className="tier-card gold">
 						<span className="tier-price">$20,000</span>
