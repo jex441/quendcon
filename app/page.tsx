@@ -871,6 +871,11 @@ export default function Home() {
 					viewBox: "400 1950 560 170",
 				},
 				{
+					name: "Red Balloon Security",
+					url: "https://redballoonsecurity.com/",
+					viewBox: "1135 1734 405 146",
+				},
+				{
 					name: "Trail of Bits",
 					url: "https://www.trailofbits.com/",
 					viewBox: "1610 1739 225 136",
