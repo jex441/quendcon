@@ -1094,6 +1094,16 @@ export default function Home() {
 							<div className="entry-tag tag-talk">Talk</div>
 						</div>
 					</div>
+          <div className="schedule-entry">
+            <span className="entry-time">4:00 PM</span>
+						<div>
+							<span className="entry-title">
+                Joe Lothan
+							</span>
+              <div className="entry-sub">Trading Android's Binder with eBPF</div>
+							<div className="entry-tag tag-talk">Talk</div>
+						</div>
+					</div>
 					<div className="schedule-entry">
 						<span className="entry-time">6:00 PM</span>
 						<div>
