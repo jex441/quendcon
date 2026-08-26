@@ -542,12 +542,12 @@ section {
 }
 
 .sponsor-level.platform .sponsor-logo-link {
-  min-height: 88px;
-  padding: 0.75rem;
+  min-height: 112px;
+  padding: 1rem;
 }
 
 .sponsor-level.platform .sponsor-logo {
-  height: 50px;
+  height: 72px;
 }
 
 .sponsor-level.bronze .sponsor-logo-grid {
@@ -810,6 +810,17 @@ export default function Home() {
 			],
 		},
 		{
+			name: "Platform",
+			className: "platform",
+			sponsors: [
+				{
+					name: "OtterSec",
+					url: "https://ottersec.io/",
+					viewBox: "581 775 842 171",
+				},
+			],
+		},
+		{
 			name: "Silver",
 			className: "silver",
 			sponsors: [
@@ -832,17 +843,6 @@ export default function Home() {
 					name: "Zellic",
 					url: "https://www.zellic.io/blog/the-auditooor-grindset/",
 					viewBox: "1138 1073 696 194",
-				},
-			],
-		},
-		{
-			name: "Platform",
-			className: "platform",
-			sponsors: [
-				{
-					name: "OtterSec",
-					url: "https://ottersec.io/",
-					viewBox: "581 775 842 171",
 				},
 			],
 		},
@@ -1058,7 +1058,7 @@ export default function Home() {
             <span className="entry-time">2:00 PM</span>
 						<div>
 							<span className="entry-title">
-                Talk 1 - Jacob Denbeaux
+                Jacob Denbeaux
 							</span>
               <div className="entry-sub">Stunt Programming through the Ages</div>
 							<div className="entry-tag tag-talk">Talk</div>
@@ -1068,7 +1068,7 @@ export default function Home() {
             <span className="entry-time">2:30 PM</span>
 						<div>
 							<span className="entry-title">
-                Talk 2 - Rick de Jager
+                Rick de Jager
 							</span>
               <div className="entry-sub">Tesla Charger RCE</div>
 							<div className="entry-tag tag-talk">Talk</div>
@@ -1078,7 +1078,7 @@ export default function Home() {
             <span className="entry-time">3:00 PM</span>
 						<div>
 							<span className="entry-title">
-                Talk 3 - AwkwardSilence
+                AwkwardSilence
 							</span>
               <div className="entry-sub">Shifting Tides</div>
 							<div className="entry-tag tag-talk">Talk</div>
@@ -1088,7 +1088,7 @@ export default function Home() {
             <span className="entry-time">3:30 PM</span>
 						<div>
 							<span className="entry-title">
-                Talk 4 - Jay Little
+                Jay Little
 							</span>
               <div className="entry-sub">The Shapes of Auditing Harnesses</div>
 							<div className="entry-tag tag-talk">Talk</div>
@@ -1147,7 +1147,7 @@ export default function Home() {
           <div className="schedule-entry">
             <span className="entry-time">1:30 PM</span>
             <div>
-              <span className="entry-title">Talk 1 - Quasar</span>
+              <span className="entry-title">Quasar</span>
               <div className="entry-sub">Telegram 1 Clicks</div>
               <div className="entry-tag tag-talk">Talk</div>
             </div>
@@ -1155,7 +1155,7 @@ export default function Home() {
           <div className="schedule-entry">
             <span className="entry-time">2:00 PM</span>
             <div>
-              <span className="entry-title">Talk 2 - Shiloh Smiles</span>
+              <span className="entry-title">Shiloh Smiles</span>
               <div className="entry-sub">Physical Pen Testing</div>
               <div className="entry-tag tag-talk">Talk</div>
             </div>
@@ -1163,7 +1163,7 @@ export default function Home() {
           <div className="schedule-entry">
             <span className="entry-time">2:30 PM</span>
             <div>
-              <span className="entry-title">Talk 3 - Michael Cowell</span>
+              <span className="entry-title">Michael Cowell</span>
               <div className="entry-sub">Terrible LaunchDaemons and where to find them</div>
               <div className="entry-tag tag-talk">Talk</div>
             </div>
@@ -1171,7 +1171,7 @@ export default function Home() {
           <div className="schedule-entry">
             <span className="entry-time">3:00 PM</span>
             <div>
-              <span className="entry-title">Talk 4 - Robert Chen with Michael Debono</span>
+              <span className="entry-title"> Closing Keynote - Robert Chen with Michael Debono</span>
               <div className="entry-sub">Save CTFs Fund</div>
               <div className="entry-tag tag-talk">Talk</div>
             </div>
