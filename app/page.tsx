@@ -537,17 +537,17 @@ section {
 }
 
 .sponsor-level.platform .sponsor-logo-grid {
-  grid-template-columns: minmax(280px, 460px);
+  grid-template-columns: minmax(230px, 330px);
   justify-content: center;
 }
 
 .sponsor-level.platform .sponsor-logo-link {
-  min-height: 160px;
-  padding: 1.5rem;
+  min-height: 136px;
+  padding: 1.25rem;
 }
 
 .sponsor-level.platform .sponsor-logo {
-  height: 112px;
+  height: 92px;
 }
 
 .sponsor-level.bronze .sponsor-logo-grid {
