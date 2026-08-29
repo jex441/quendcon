@@ -1058,16 +1058,6 @@ export default function Home() {
             <span className="entry-time">2:00 PM</span>
 						<div>
 							<span className="entry-title">
-                Jacob Denbeaux
-							</span>
-              <div className="entry-sub">Stunt Programming through the Ages</div>
-							<div className="entry-tag tag-talk">Talk</div>
-						</div>
-					</div>
-					<div className="schedule-entry">
-            <span className="entry-time">2:30 PM</span>
-						<div>
-							<span className="entry-title">
                 Rick de Jager
 							</span>
               <div className="entry-sub">Tesla Charger RCE</div>
@@ -1075,7 +1065,7 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="schedule-entry">
-            <span className="entry-time">3:00 PM</span>
+            <span className="entry-time">2:30 PM</span>
 						<div>
 							<span className="entry-title">
                 AwkwardSilence
@@ -1085,7 +1075,7 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="schedule-entry">
-            <span className="entry-time">3:30 PM</span>
+            <span className="entry-time">3:00 PM</span>
 						<div>
 							<span className="entry-title">
                 Jay Little
@@ -1095,7 +1085,7 @@ export default function Home() {
 						</div>
 					</div>
           <div className="schedule-entry">
-            <span className="entry-time">4:00 PM</span>
+            <span className="entry-time">3:30 PM</span>
 						<div>
 							<span className="entry-title">
                 Joe Lothan
