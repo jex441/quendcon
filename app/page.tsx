@@ -1090,7 +1090,7 @@ export default function Home() {
 							<span className="entry-title">
                 Joe Lothan
 							</span>
-              <div className="entry-sub">Trading Android's Binder with eBPF</div>
+              <div className="entry-sub">Tracing Android's Binder with eBPF</div>
 							<div className="entry-tag tag-talk">Talk</div>
 						</div>
 					</div>
